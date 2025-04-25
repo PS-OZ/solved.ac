@@ -1,17 +1,40 @@
-#include<iostream>
+/*
+ * 문제: 백준 1330번 - 두 수 비교하기
+ * 링크: https://www.acmicpc.net/problem/1330
+ * 분류: 구현, 조건문
+ * 
+ * 문제 설명:
+ * - 두 정수 A와 B가 주어졌을 때, A와 B를 비교하여 관계 연산자(>, <, ==)로 출력하는 문제.
+ * 
+ * 입력:
+ * - 첫째 줄에 두 정수 A와 B가 공백을 기준으로 주어진다. (-10,000 ≤ A, B ≤ 10,000)
+ * 
+ * 출력:
+ * - 첫째 줄에 A가 B보다 큰 경우에는 '>', 작은 경우에는 '<', 같은 경우에는 '=='를 출력한다.
+ * 
+ * 접근 방법:
+ * - 조건문(if-else)을 사용하여 A와 B의 크기를 비교한 후, 각 경우에 맞는 기호를 출력한다.
+ * 
+ * 시간복잡도: O(1)
+ * 공간복잡도: O(1)
+ */
+
+#include <iostream>
 using namespace std;
 
 int main() {
-	int a, b;
-	cin >> a >> b;
+    int a, b;
+    cin >> a >> b; // 두 정수 입력 받기
 
-	if (a > b) {
-		cout << ">";
-	}
-	else if (a < b) {
-		cout << "<";
-	}
-	else {
-		cout << "==";
-	}
+    if (a > b) {
+        cout << ">";
+    }
+    else if (a < b) {
+        cout << "<";
+    }
+    else {
+        cout << "==";
+    }
+
+    return 0;
 }
