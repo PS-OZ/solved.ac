@@ -1,4 +1,4 @@
-# [solved.ac](https://solved.ac/profile/raymond1203) - PS-OZ의 백준 문제 풀이 저장소
+# [solved.ac](https://solved.ac/profile/raymond1203) - OZ의 백준 문제 풀이 저장소
 
 solved.ac Class별 백준(BOJ) 문제 풀이를 체계적으로 정리한 레포지토리입니다.
 
