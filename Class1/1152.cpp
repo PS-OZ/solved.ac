@@ -1,21 +1,48 @@
-#include<iostream>
-#include<string>
+/*
+ * 문제: 백준 1152번 - 단어의 개수
+ * 링크: https://www.acmicpc.net/problem/1152
+ * 분류: 문자열, 구현
+ * 
+ * 문제 설명:
+ * - 한 줄의 문자열이 주어졌을 때, 그 안에 포함되어 있는 단어의 개수를 출력하는 문제.
+ * - 단어는 공백 한 개로 구분되며, 문자열의 앞뒤에 공백이 있을 수 있고, 연속된 공백도 있을 수 있다.
+ * 
+ * 입력:
+ * - 첫째 줄에 문자열 S가 주어진다. (0 <= 문자열 길이 <= 1,000,000)
+ * 
+ * 출력:
+ * - 문자열 S에 포함되어 있는 단어의 개수를 출력한다.
+ * 
+ * 접근 방법:
+ * - 문자열 전체를 입력받아, 공백이 아닌 문자가 연속적으로 등장하는 부분을 단어로 간주한다.
+ * - inWord 플래그를 사용하여 현재 단어 내부에 있는지 추적하고, 단어의 시작을 감지할 때마다 카운트한다.
+ * 
+ * 시간복잡도: O(N) (N = 문자열 길이)
+ * 공간복잡도: O(1) (입력 문자열 저장 공간 제외)
+ */
+
+#include <iostream>
+#include <string>
 using namespace std;
 
-int main(){
+int main() {
     string s;
-    getline(cin, s);
+    getline(cin, s); // 한 줄 전체 입력 받기
+
     int cnt = 0;
-    bool inWord = false;
-    for(int i = 0; i < s.length(); i++){
-        if(s[i] != ' ' && !inWord){
+    bool inWord = false; // 현재 단어 내부에 있는지 여부
+
+    for (int i = 0; i < s.length(); i++) {
+        if (s[i] != ' ' && !inWord) {
+            // 공백이 아닌 문자를 처음 만났을 때 단어 시작
             inWord = true;
             cnt++;
-        }
-        else if(s[i] == ' '){
+        } else if (s[i] == ' ') {
+            // 공백을 만나면 단어가 끝남
             inWord = false;
         }
     }
-    cout << cnt;
-    return 0; 
+
+    cout << cnt; // 단어 개수 출력
+    return 0;
 }
